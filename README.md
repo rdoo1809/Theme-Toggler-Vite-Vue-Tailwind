@@ -1,15 +1,12 @@
-# vue-project
+# Vue+Vite+Tailwind Theme Toggler
+
+https://rdoo1809.github.io/Theme-Toggler-Vite-Vue-Tailwind/
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+This is a template application to be used as a starting point for a new front end.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
+Comes equipped with a manual light/dark mode toggle switch, and hamburger nav for mobile display.
 ## Project Setup
 
 ```sh
@@ -20,10 +17,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```

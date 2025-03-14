@@ -11,7 +11,7 @@ const toggleDark = useToggle(isDark);
 
 
     <div
-      class="max-w-[700px] flex items-start justify-center shadow-md p-6 rounded-md bg-white dark:bg-slate-700"
+      class=" flex items-start justify-center shadow-md p-6 rounded-md bg-white dark:bg-slate-700 mt-20"
     >
       <div class="flex items-start sm:items-center mb-4">
         <h1 class="text-4xl flex-1 dark:text-white">
@@ -22,7 +22,7 @@ const toggleDark = useToggle(isDark);
         @click="toggleDark()"
         class="py-2 px-4 bg-black text-white rounded-md dark:bg-white dark:text-black"
       >
-       Toggle {{ isDark ? "Dark" : "Light" }}
+       Toggle {{ isDark ? "Light" : "Dark" }}
       </button>
     </div>
 </template>

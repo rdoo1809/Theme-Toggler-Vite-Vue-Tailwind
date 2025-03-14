@@ -1,41 +1,50 @@
+<script setup>
+import {ref} from "vue";
+import Logo from "@/assets/logo.svg"
+
+const isOpen = ref(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
+</script>
+
 <template>
-  <nav class="bg-white dark:bg-gray-900 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
+  <nav class="bg-white dark:bg-black shadow-md">
+    <div class="h-24 px-4 flex justify-between items-center">
 
-        <div class="flex-shrink-0">
-          <img src="https://via.placeholder.com/50" alt="Logo" class="h-10 w-10">
-        </div>
+      <img :src="Logo" alt="Logo" class="h-10 w-10">
 
-        <!-- Navigation Links -->
-        <div class="hidden md:flex space-x-6">
-          <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">Home</a>
-          <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">About</a>
-          <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">Services</a>
-          <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">Contact</a>
-        </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#" class="nav-link">NavLink1</a>
+        <a href="#" class="nav-link">NavLink2</a>
+        <a href="#" class="nav-link">NavLink3</a>
+        <a href="#" class="nav-link">NavLink4</a>
+      </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button @click="toggleMenu" class="text-gray-700 dark:text-gray-300 focus:outline-none">
-            ☰
-          </button>
-        </div>
+      <!-- Mobile Nav -->
+      <div class="md:hidden">
+        <button @click="toggleMenu" class="text-black dark:text-white focus:outline-none text-2xl">
+          ☰
+        </button>
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div v-if="isOpen" class="md:hidden bg-white dark:bg-gray-900">
-      <a href="#"
-         class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Home</a>
-      <a href="#" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">About</a>
-      <a href="#" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Services</a>
-      <a href="#" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Contact</a>
+    <div v-if="isOpen" class="md:hidden bg-white dark:bg-black">
+      <a href="#" class="nav-link-mobile">NavLink1</a>
+      <a href="#" class="nav-link-mobile">NavLink2</a>
+      <a href="#" class="nav-link-mobile">NavLink3</a>
+      <a href="#" class="nav-link-mobile">NavLink4</a>
     </div>
   </nav>
 </template>
-<script>
-export default {
-  name: 'NavBar'
+
+<style scoped>
+.nav-link {
+  @apply text-black dark:text-white hover:text-blue-500;
 }
-</script>
+
+.nav-link-mobile {
+  @apply block px-4 py-2 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-400
+}
+</style>

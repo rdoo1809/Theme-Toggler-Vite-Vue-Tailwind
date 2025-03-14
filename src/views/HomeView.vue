@@ -1,10 +1,7 @@
 <script setup>
-import {useDark, useToggle} from "@vueuse/core";
 import NavBar from "@/views/NavBar.vue";
 import ThemeToggler from "@/views/ThemeToggler.vue";
 
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
 </script>
 
 <template>
@@ -28,8 +25,5 @@ const toggleDark = useToggle(isDark);
   <ThemeToggler/>
 </template>
 
-<style>
-
-</style>
 
 

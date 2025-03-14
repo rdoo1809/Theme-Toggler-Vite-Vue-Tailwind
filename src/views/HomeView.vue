@@ -1,6 +1,6 @@
 <script setup>
-import NavBar from "@/views/NavBar.vue";
-import ThemeToggler from "@/views/ThemeToggler.vue";
+import NavBar from "@/components/NavBar.vue";
+import ThemeToggler from "@/components/ThemeToggler.vue";
 
 </script>
 
